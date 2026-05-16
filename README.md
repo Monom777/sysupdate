@@ -1,20 +1,46 @@
 # ⚡ sysupdate
 
-Утиліта для швидкого та зручного оновлення системи на Arch Linux / CachyOS, написана на Go з використанням TUI-фреймворку `Bubble Tea`.
+A fast and convenient system update utility for Arch Linux, written in Go using the `Bubble Tea` TUI framework.
 
-## ✨ Особливості (Features)
-* 🌐 **Мультимовність:** Підтримка багатьох мов із вбудованим пошуком при першому запуску.
-* 📦 **Робота з AUR та Pacman:** Автоматичний підрахунок доступних пакетів для оновлення.
-* 🧹 **Автоочищення кешу:** Видаляє застарілі пакети (`pacman -Sc`) після успішного апдейту.
-* 🌐 **Перевірка мережі:** Швидкий пінг `1.1.1.1` перед початком, щоб уникнути помилок таймауту.
-* 🔄 **Self-Update:** Можливість оновити саму утиліту з GitHub прямо з TUI меню.
-* 📜 **Історія та таймер:** Логування оновлень із фіксацією точного часу виконання.
+## ✨ Features
+* 🌐 **Multi-language Support:** Built-in language search and support upon the first launch.
+* 📦 **Pacman & AUR Integration:** Automatically counts available updates before running.
+* 🧹 **Auto Cache Cleanup:** Automatically removes stale package files (`pacman -Sc`) after a successful update.
+* 🌐 **Network Check:** Quick ping to `1.1.1.1` at startup to prevent timeout errors.
+* 🔄 **Self-Update:** Ability to update the utility itself from GitHub directly from the TUI menu.
+* 📜 **History & Timer:** Logs all updates with precise execution time tracking.
 
-## 🛠️ Встановлення (Installation)
+## 🛠️ Installation
 
-### Компіляція з сирців:
+### Build from source:
 ```bash
-git clone [https://github.com/ТВІЙ_НІК/sysupdate.git](https://github.com/ТВІЙ_НІК/sysupdate.git)
+git clone [https://github.com/YOUR_NICKNAME/sysupdate.git](https://github.com/YOUR_NICKNAME/sysupdate.git)
+cd sysupdate
+go build -o sysupdate .
+mv sysupdate ~/.local/bin/
+
+---
+
+## 🇷🇺 Russian Version (`README.ru.md`)
+
+```markdown
+# ⚡ sysupdate
+
+Утилита для быстрого и удобного обновления системы на Arch Linux, написанная на Go с использованием TUI-фреймворка `Bubble Tea`.
+
+## ✨ Особые возможности (Features)
+* 🌐 **Мультиязычность:** Поддержка множества языков со встроенным поиском при первом запуске.
+* 📦 **Работа с AUR и Pacman:** Автоматический подсчет доступных для обновления пакетов.
+* 🧹 **Автоочистка кэша:** Удаляет устаревшие пакеты (`pacman -Sc`) после успешного апдейта.
+* 🌐 **Проверка сети:** Быстрый пинг `1.1.1.1` перед стартом во избежание ошибок таймаута.
+* 🔄 **Self-Update:** Возможность обновить саму утилиту с GitHub прямо из TUI-меню.
+* 📜 **История и таймер:** Логирование обновлений с фиксацией точного времени выполнения.
+
+## 🛠️ Установка (Installation)
+
+### Компиляция из исходников:
+```bash
+git clone [https://github.com/ТВОЙ_НИК/sysupdate.git](https://github.com/ТВОЙ_НИК/sysupdate.git)
 cd sysupdate
 go build -o sysupdate .
 mv sysupdate ~/.local/bin/
