@@ -1,20 +1,32 @@
-# ⚡ sysupdate
+# A convenient and fast utility for updating Arch Linux (and derivatives), written in Go using the Bubble Tea TUI framework.
 
-Зручна та швидка утиліта для оновлення Arch Linux (та дистрибутивів на його базі), написана на Go з використанням TUI-фреймворку `Bubble Tea`.
+* 🌐 Multilingual Support: Language selection on the first launch (settings are saved).
+* 📦 Pacman & AUR Integration: Automatically counts available updates using checkupdates and yay/paru.
+* 🧹 Auto Cache Cleanup: Performs a safe package cache cleanup (pacman -Sc) after a successful update.
+* 🌐 Network Check: Quick ping to 1.1.1.1 to prevent freezing when there is no internet connection.
+* 🔄 Self-Update: Ability to update the utility source code from GitHub and rebuild.
+* 📜 History & Timer: Logs updates with precise timing of the process.
 
-## ✨ Особливості
-* 🌐 **Багатомовність:** Пошук та вибір мови при першому запуску (налаштування зберігаються).
-* 📦 **Інтеграція з Pacman & AUR:** Автоматично підраховує кількість доступних оновлень через `checkupdates` та `yay`/`paru`.
-* 🧹 **Автоочищення кешу:** Виконує безпечне очищення кешу пакетів (`pacman -Sc`) після успішного апдейту.
-* 🌐 **Перевірка мережі:** Швидкий пінг `1.1.1.1` для уникнення зависань за відсутності інтернету.
-* 🔄 **Самооновлення:** Можливість оновити код утиліти з GitHub та перезбирати її прямо з меню.
-* 📜 **Історія та Таймер:** Логування оновлень із фіксацією точного часу, витраченого на процес.
+----------------------------------------------------------------------
 
-## 🛠️ Встановлення
+### From AUR (Recommended) ###
 
+You can easily install sysupdate-git using your favorite AUR helper:
 ```bash
-git clone [https://github.com/monom777/sysupdate.git](https://github.com/monom777/sysupdate.git)
-cd sysupdate
+yay -S sysupdate-git
+```
+
+### Manual Build
+
+If you prefer to build the utility manually from the source code, follow these steps:
+```bash
+git clone https://github.com/monom777/sysupdate-git.git
+cd sysupdate-git
 go build -o sysupdate .
 mkdir -p ~/.local/bin
 mv sysupdate ~/.local/bin/
+sysupdate
+```
+----------------------------------------------------------------------
+
+👤 Developer: Nazar (monomom777) -- dovgalnazar94@gmail.com
